@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="Time_Buddy_Today_Extension" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="5c0-ad-YmQ" id="KqP-Qz-SeF"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <subviews>
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-OI-Kj3">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="RvA-tQ-amB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView id="5c0-ad-YmQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" scrollDirection="horizontal" id="qah-FV-CeD">
+                                    <size key="itemSize" width="50" height="58"/>
+                                    <edgeInsets key="sectionInset" left="5" right="5" top="0.0" bottom="0.0"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" name="windowFrameColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="-2" id="OTc-l4-JAw"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="4Z2-fI-jpO">
+                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ecK-4F-BzE">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="mdO-OI-Kj3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="N5c-xm-oFx"/>
+                <constraint firstItem="mdO-OI-Kj3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Nct-Hf-hCZ"/>
+                <constraint firstAttribute="trailing" secondItem="mdO-OI-Kj3" secondAttribute="trailing" id="mUy-aI-7gt"/>
+                <constraint firstAttribute="bottom" secondItem="mdO-OI-Kj3" secondAttribute="bottom" id="tSn-Cg-kuF"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>
