@@ -20,6 +20,7 @@
 		37CF620C1CC3C433009827D1 /* TodayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CF620B1CC3C433009827D1 /* TodayDataSource.swift */; };
 		37CF620E1CC3C55F009827D1 /* ColumnBasedFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CF620D1CC3C55F009827D1 /* ColumnBasedFlowLayout.swift */; };
 		37CF620F1CC3C78A009827D1 /* TimeBuddyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FF9FD91CBBFFA7002A60C7 /* TimeBuddyKit.framework */; };
+		37CF62121CC3F133009827D1 /* tz.json in Resources */ = {isa = PBXBuildFile; fileRef = 37CF62111CC3F133009827D1 /* tz.json */; };
 		37FF9FB31CBBBB10002A60C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF9FB21CBBBB10002A60C7 /* AppDelegate.swift */; };
 		37FF9FB51CBBBB10002A60C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FF9FB41CBBBB10002A60C7 /* ViewController.swift */; };
 		37FF9FB81CBBBB10002A60C7 /* Time_Buddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37FF9FB61CBBBB10002A60C7 /* Time_Buddy.xcdatamodeld */; };
@@ -113,6 +114,8 @@
 		37CF62091CC3A865009827D1 /* TimeZoneCollectionViewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZoneCollectionViewItemView.swift; sourceTree = "<group>"; };
 		37CF620B1CC3C433009827D1 /* TodayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDataSource.swift; sourceTree = "<group>"; };
 		37CF620D1CC3C55F009827D1 /* ColumnBasedFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnBasedFlowLayout.swift; sourceTree = "<group>"; };
+		37CF62101CC3D003009827D1 /* Time Buddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Time Buddy.entitlements"; sourceTree = "<group>"; };
+		37CF62111CC3F133009827D1 /* tz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tz.json; sourceTree = "<group>"; };
 		37FF9FAF1CBBBB10002A60C7 /* Time Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FF9FB21CBBBB10002A60C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FF9FB41CBBBB10002A60C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 		37FF9FB11CBBBB10002A60C7 /* Time Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				37CF62101CC3D003009827D1 /* Time Buddy.entitlements */,
 				37FF9FB21CBBBB10002A60C7 /* AppDelegate.swift */,
 				37FF9FB41CBBBB10002A60C7 /* ViewController.swift */,
 				37FF9FB91CBBBB10002A60C7 /* Assets.xcassets */,
@@ -259,6 +263,7 @@
 		37FF9FDA1CBBFFA7002A60C7 /* TimeBuddyKit */ = {
 			isa = PBXGroup;
 			children = (
+				37CF62111CC3F133009827D1 /* tz.json */,
 				37FF9FDB1CBBFFA7002A60C7 /* TimeBuddyKit.h */,
 				37FF9FDD1CBBFFA7002A60C7 /* Info.plist */,
 				37FF9FFB1CBC0291002A60C7 /* TimeZoneEntry.swift */,
@@ -397,9 +402,18 @@
 				TargetAttributes = {
 					3710AC331CBDB95A0003DB0E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2GC3DM3XAQ;
 					};
 					37FF9FAE1CBBBB10002A60C7 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					37FF9FC21CBBBB10002A60C7 = {
 						CreatedOnToolsVersion = 7.3;
@@ -467,6 +481,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CF62121CC3F133009827D1 /* tz.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Time Buddy Today Extension/Time_Buddy_Today_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Time Buddy Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
@@ -604,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Time Buddy Today Extension/Time_Buddy_Today_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Time Buddy Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
@@ -699,6 +716,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Time Buddy/Time Buddy.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Time Buddy/Info.plist";
@@ -712,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Time Buddy/Time Buddy.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Time Buddy/Info.plist";
