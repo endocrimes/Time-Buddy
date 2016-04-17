@@ -1,4 +1,4 @@
 /* Display name and description for this extension. */
-"CFBundleDisplayName" = "Time Buddy Today Extension";
-"com.apple.notificationcenter.widget.description" = "Sample description";
+"CFBundleDisplayName" = "Time Buddy";
+"com.apple.notificationcenter.widget.description" = "Display selected timezones.";
 
