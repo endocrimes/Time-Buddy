@@ -28,12 +28,14 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         dataController.insert(LightweightTimeZone(label: "LDN", tzName: "Europe/London"))
         dataController.insert(LightweightTimeZone(label: "NYC", tzName: "America/New_York"))
         dataController.insert(LightweightTimeZone(label: "SFO", tzName: "America/Los_Angeles"))
+        dataController.insert(LightweightTimeZone(label: "MDE", tzName: "America/Bogota"))
+        dataController.insert(LightweightTimeZone(label: "BER", tzName: "Europe/Berlin"))
         todayDataSource = TodayDataSource(dataController: dataController)
         
         let layout = ColumnBasedFlowLayout(numberOfColumns: numberOfColumns,
-                                           minimumPadding: 5.0,
+                                           minimumPadding: 8.0,
                                            totalWidth: 280,
-                                           itemHeight: 58)
+                                           itemHeight: 50)
         collectionView.collectionViewLayout = layout
         
         collectionView.backgroundView = nil
@@ -48,7 +50,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     func recalculateHeight() {
         let itemCount = collectionView.numberOfItemsInSection(0)
         let numberOfRows = Int(ceil(Double(itemCount) / Double(numberOfColumns)))
-        let rowHeight = 68
+        let rowHeight = numberOfRows > 1 ? 58 : 50
         preferredContentSize = NSSize(width: 280, height: rowHeight * numberOfRows)
     }
 

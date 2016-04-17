@@ -15,14 +15,14 @@ class ColumnBasedFlowLayout: NSCollectionViewFlowLayout {
         let minimumSpacing: CGFloat = 5.0
         minimumInteritemSpacing = minimumSpacing
         minimumLineSpacing = minimumSpacing
-        sectionInset = NSEdgeInsetsMake(minimumSpacing, minimumSpacing,
-                                                   minimumSpacing, minimumSpacing)
+        sectionInset = NSEdgeInsetsMake(0.0, minimumSpacing,
+                                        0.0, minimumSpacing)
         let itemWidth: CGFloat = floor(
             (totalWidth - minimumSpacing * (CGFloat(numberOfColumns) + 1))
                 / CGFloat(numberOfColumns)
         )
         
-        itemSize = CGSizeMake(itemHeight, itemWidth)
+        itemSize = CGSizeMake(itemWidth, itemHeight)
     }
     
     required init?(coder aDecoder: NSCoder) {
