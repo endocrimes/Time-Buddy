@@ -25,11 +25,12 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         TodayDataSource.registerCellsInCollectionView(collectionView)
         
         let dataController = InMemoryDataController()
-        dataController.insert(LightweightTimeZone(label: "LDN", tzName: "Europe/London"))
-        dataController.insert(LightweightTimeZone(label: "NYC", tzName: "America/New_York"))
-        dataController.insert(LightweightTimeZone(label: "SFO", tzName: "America/Los_Angeles"))
-        dataController.insert(LightweightTimeZone(label: "MDE", tzName: "America/Bogota"))
-        dataController.insert(LightweightTimeZone(label: "BER", tzName: "Europe/Berlin"))
+        dataController.insert(LightweightTimeZone(label: "🇬🇧", tzName: "Europe/London"))
+        dataController.insert(LightweightTimeZone(label: "🗽", tzName: "America/New_York"))
+        dataController.insert(LightweightTimeZone(label: "💩", tzName: "America/Los_Angeles"))
+        dataController.insert(LightweightTimeZone(label: "🌋", tzName: "America/Bogota"))
+        dataController.insert(LightweightTimeZone(label: "🐻", tzName: "Europe/Berlin"))
+
         todayDataSource = TodayDataSource(dataController: dataController)
         
         let layout = ColumnBasedFlowLayout(numberOfColumns: numberOfColumns,
