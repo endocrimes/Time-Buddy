@@ -16,7 +16,7 @@
         <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <subviews>
-                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-OI-Kj3">
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdO-OI-Kj3">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="RvA-tQ-amB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
@@ -25,7 +25,7 @@
                             <collectionView id="5c0-ad-YmQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" scrollDirection="horizontal" id="qah-FV-CeD">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="5" id="qah-FV-CeD">
                                     <size key="itemSize" width="50" height="58"/>
                                     <edgeInsets key="sectionInset" left="5" right="5" top="0.0" bottom="0.0"/>
                                 </collectionViewFlowLayout>
@@ -38,11 +38,11 @@
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="4Z2-fI-jpO">
-                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ecK-4F-BzE">
-                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <rect key="frame" x="-100" y="-100" width="15" height="143"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>

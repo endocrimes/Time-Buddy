@@ -9,11 +9,7 @@
 import Cocoa
 
 class TimeZoneCollectionViewItemView: NSView {
-
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-
-        // Drawing code here.
-    }
-    
+    @IBOutlet weak var locationLabel: NSTextField?
+    @IBOutlet weak var timeLabel: NSTextField?
+    @IBOutlet weak var timeBackgroundView: NSView?    
 }

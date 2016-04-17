@@ -9,10 +9,18 @@
 import Cocoa
 
 class TimeZoneCollectionViewItem: NSCollectionViewItem {
-
+    var itemView: TimeZoneCollectionViewItemView {
+        return view as! TimeZoneCollectionViewItemView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        preferredContentSize = NSSize(width: 50, height: 58)
+        let layer = itemView.timeBackgroundView!.layer!
+        layer.cornerRadius = 6
+        layer.backgroundColor = NSColor(calibratedRed: 0.41,
+                                        green: 0.27,
+                                        blue: 0.85,
+                                        alpha: 1.00).CGColor
     }
     
     override func viewDidAppear() {
