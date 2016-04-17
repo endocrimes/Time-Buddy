@@ -8,12 +8,11 @@
 
 import Cocoa
 import NotificationCenter
+import TimeBuddyKit
 
-class TodayViewController: NSViewController, NCWidgetProviding, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
-    private struct Statics {
-        static let timeCellIdentifier = "TodayViewControllerTimeCell"
-    }
+class TodayViewController: NSViewController, NCWidgetProviding {
     @IBOutlet weak var collectionView: NSCollectionView!
+    var todayDataSource: TodayDataSource!
     
     override var nibName: String? {
         return "TodayViewController"
@@ -23,27 +22,25 @@ class TodayViewController: NSViewController, NCWidgetProviding, NSCollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = NSNib(nibNamed: "TimeZoneCollectionViewItem", bundle: nil)
-        print(nib)
-        collectionView.registerNib(nib, forItemWithIdentifier: Statics.timeCellIdentifier)
+        TodayDataSource.registerCellsInCollectionView(collectionView)
         
-        if let flowLayout = collectionView.collectionViewLayout as? NSCollectionViewFlowLayout {
-            let minimumSpacing: CGFloat = 5.0
-            flowLayout.minimumInteritemSpacing = minimumSpacing
-            flowLayout.minimumLineSpacing = minimumSpacing
-            flowLayout.sectionInset = NSEdgeInsetsMake(minimumSpacing, minimumSpacing,
-                                                       minimumSpacing, minimumSpacing)
-            
-            let screenWidth: CGFloat = 280
-            let itemWidth: CGFloat = floor((screenWidth - (minimumSpacing * (CGFloat(numberOfColumns) + 1.0))) / CGFloat(numberOfColumns))
-
-            flowLayout.itemSize = CGSizeMake(58, itemWidth);
-        }
+        let dataController = InMemoryDataController()
+        dataController.insert(LightweightTimeZone(label: "LDN", tzName: "Europe/London"))
+        dataController.insert(LightweightTimeZone(label: "NYC", tzName: "America/New_York"))
+        dataController.insert(LightweightTimeZone(label: "SFO", tzName: "America/Los_Angeles"))
+        todayDataSource = TodayDataSource(dataController: dataController)
         
-        collectionView.reloadData()
+        let layout = ColumnBasedFlowLayout(numberOfColumns: numberOfColumns,
+                                           minimumPadding: 5.0,
+                                           totalWidth: 280,
+                                           itemHeight: 58)
+        collectionView.collectionViewLayout = layout
         
         collectionView.backgroundView = nil
         collectionView.backgroundColors = [NSColor.clearColor()]
+        
+        collectionView.dataSource = todayDataSource
+        collectionView.reloadData()
         
         recalculateHeight()
     }
@@ -57,17 +54,5 @@ class TodayViewController: NSViewController, NCWidgetProviding, NSCollectionView
 
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
         completionHandler(.NewData)
-    }
-    
-    //MARK: - NSCollectionViewDataSource
-    
-    func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
-    }
-    
-    func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
-        let view = collectionView.makeItemWithIdentifier(Statics.timeCellIdentifier, forIndexPath: indexPath)
-        print(view)
-        return view
     }
 }

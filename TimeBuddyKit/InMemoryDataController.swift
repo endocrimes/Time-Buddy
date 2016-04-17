@@ -15,6 +15,7 @@ public class InMemoryDataController: DataControllerProtocol {
     
     public func insert(item: TimeZoneEntry) {
         data.append(item)
+        data.sortInPlace({ return $0.0.timeZone!.secondsFromGMT < $0.1.timeZone!.secondsFromGMT })
     }
     
     public func remove(item: TimeZoneEntry) {
@@ -25,5 +26,8 @@ public class InMemoryDataController: DataControllerProtocol {
     
     public subscript(index: Int) -> TimeZoneEntry {
         return data[index]
+    }
+    
+    public init() {
     }
 }

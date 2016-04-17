@@ -13,4 +13,6 @@ public protocol DataControllerProtocol {
     
     func insert(item: TimeZoneEntry)
     func remove(item: TimeZoneEntry)
+    
+    subscript(index: Int) -> TimeZoneEntry { get }
 }
