@@ -1,0 +1,6 @@
+framework module Latch {
+  umbrella header "Latch-umbrella.h"
+
+  export *
+  module * { export * }
+}

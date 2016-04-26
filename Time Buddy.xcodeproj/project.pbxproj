@@ -406,6 +406,7 @@
 					};
 					37FF9FAE1CBBBB10002A60C7 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2GC3DM3XAQ;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
 								enabled = 0;
@@ -421,6 +422,7 @@
 					};
 					37FF9FD81CBBFFA7002A60C7 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2GC3DM3XAQ;
 					};
 					37FF9FE11CBBFFA7002A60C7 = {
 						CreatedOnToolsVersion = 7.3;
@@ -606,11 +608,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Time Buddy Today Extension/Time_Buddy_Today_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application:  Danielle Lancashire(2GC3DM3XAQ)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Time Buddy Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Time-Buddy.Time-Buddy-Today-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddy.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -619,11 +623,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Time Buddy Today Extension/Time_Buddy_Today_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application:  Danielle Lancashire(2GC3DM3XAQ)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Time Buddy Today Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Time-Buddy.Time-Buddy-Today-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddy.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -715,12 +721,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Time Buddy/Time Buddy.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application:  Danielle Lancashire(2GC3DM3XAQ)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Time Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Time-Buddy";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -729,12 +737,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Time Buddy/Time Buddy.entitlements";
+				CODE_SIGN_IDENTITY = "Developer ID Application:  Danielle Lancashire(2GC3DM3XAQ)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Time Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.rocketapps.Time-Buddy";
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -769,6 +779,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application:  Danielle Lancashire(2GC3DM3XAQ)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -779,8 +790,9 @@
 				INFOPLIST_FILE = TimeBuddyKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddyKit;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddy.Kit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -793,6 +805,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application:  Danielle Lancashire(2GC3DM3XAQ)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -803,8 +816,9 @@
 				INFOPLIST_FILE = TimeBuddyKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddyKit;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddy.Kit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -819,6 +833,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddyKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Time Buddy.app/Contents/MacOS/Time Buddy";
 			};
 			name = Debug;
@@ -831,6 +846,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.rocketapps.TimeBuddyKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Time Buddy.app/Contents/MacOS/Time Buddy";
 			};
 			name = Release;

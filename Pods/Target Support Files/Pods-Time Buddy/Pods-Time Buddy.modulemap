@@ -1,0 +1,6 @@
+framework module Pods_Time_Buddy {
+  umbrella header "Pods-Time Buddy-umbrella.h"
+
+  export *
+  module * { export * }
+}

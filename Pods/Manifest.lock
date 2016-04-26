@@ -1,0 +1,10 @@
+PODS:
+  - Latch (1.2.2)
+
+DEPENDENCIES:
+  - Latch
+
+SPEC CHECKSUMS:
+  Latch: 49e68385b93b0b9882a72503f6da0797c895dbd0
+
+COCOAPODS: 0.39.0
